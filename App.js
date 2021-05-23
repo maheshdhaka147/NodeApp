@@ -114,6 +114,8 @@ jwt.verify(token,"somesecret",(err,decoded)=>{
 app.get("*",(req,res)=>{
     res.status(404).send(`The resource is not found`)
 })
-app.listen(8080,(req,res)=>{
+app.listen(5000,(req,res)=>{
     console.log("The server is listening at port 8080")
 })
+
+
