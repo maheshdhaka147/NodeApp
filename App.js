@@ -5,6 +5,7 @@ const mongoose=require("mongoose")
 const bcrypt=require('bcrypt')
 const jwt=require("jsonwebtoken")
 const isAuthenticated=require("./Authentication")
+const port = process.env.PORT || 80
 // Set some middlewares
 app.use(cors())
 app.use(express.json())
@@ -114,7 +115,7 @@ jwt.verify(token,"somesecret",(err,decoded)=>{
 app.get("*",(req,res)=>{
     res.status(404).send(`The resource is not found`)
 })
-app.listen(5000,(req,res)=>{
+app.listen(app,(req,res)=>{
     console.log("The server is listening at port 8080")
 })
 
