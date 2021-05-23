@@ -4,27 +4,27 @@ const cors=require("cors")
 const mongoose=require("mongoose")
 const bcrypt=require('bcrypt')
 const jwt=require("jsonwebtoken")
-const isAuthenticated=require("./Authentication")
+// const isAuthenticated=require("./Authentication")
 const port = process.env.PORT || 80
 // Set some middlewares
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded())
 
-mongoose.connect('mongodb+srv://myuser:mypass@cluster0.o5hgl.mongodb.net/mydata?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true})
-.then((result)=>{
-    console.log("Connection Successful")
-}).catch((err)=>{
-    console.log(err)
-})
+// mongoose.connect('mongodb+srv://myuser:mypass@cluster0.o5hgl.mongodb.net/mydata?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true})
+// .then((result)=>{
+//     console.log("Connection Successful")
+// }).catch((err)=>{
+//     console.log(err)
+// })
 
 
-const myModel=mongoose.model('userinfo',{
-    'fName':String,
-    'lName':String,
-    'email':String,
-    'password':String
-})
+// const myModel=mongoose.model('userinfo',{
+//     'fName':String,
+//     'lName':String,
+//     'email':String,
+//     'password':String
+// })
 
 
 
